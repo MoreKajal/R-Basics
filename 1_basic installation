@@ -1,0 +1,15 @@
+
+# install.packages("dslabs")
+# library(dslabs)
+# install.packages("tidyverse")
+
+# installed.packages(c("tidyverse", "dslabs")) # To install two packages at a time
+# installed.packages()  # To see list of all installed packages
+
+library(tidyverse)
+library(dslabs)
+data("murders")
+
+murders %>%
+  ggplot(aes(population, total, label = abb, color=region)) + geom_label()
+
